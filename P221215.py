@@ -2,15 +2,28 @@
 # python P221215.py 129 
 import sys
 
-print(type(sys.argv[1]))
-print(type(int(sys.argv[1])))
-inputData=type(int(sys.argv[1]))
-print(type(128))
-if -127 < inputData or inputData < 128 :
-    print("This Value can cast to Byte without Loss")
-else :
-    print("This Value can't cast to Byte without Loss")
+def homwork1215_1():
+# 파이썬 문자열 비교연산자
+# 완전 일치 : == !=
+# 부분 일치 : in not in
+# 전방 일치 : startswith
+# 후방 일치 : endswith
+homwork1215_1()
 
+
+# public class homeWork1215_1 {
+
+# 	public static void main(String[] args) {
+# 		String A="501";
+# 		String B="501";
+# 		String C=new String("501");
+# 	    System.out.println(A==B);
+# 	    System.out.println(A==C);
+# 	    System.out.println(A.equals(C));
+# 	    System.out.println("A와 B는 같습니까? "+A==B); //연산 순서에 따라 "A와 B는 같습니까? "+A 가 더해져서 "A와 B는 같습니까? 501"과 "501"을 비교하게 되어 False가 나옴
+# 	    System.out.println("A와 B는 같습니까? "+A.equals(B));
+
+# 	}
 
 # import java.math.BigDecimal;
 
@@ -172,4 +185,30 @@ else :
 # 		 return left +right;
 			
 # 	}
+# }
+
+
+# }
+# public class homeWork1215_2 {
+# 	public static void main(String[] args) {
+# 		int per =(int)(Math.random()*50+1);
+# 		System.out.println(per);
+# 		per=30;
+# 		if (per<=10) {
+# 			System.out.println("1등급입니다.");
+# 		}
+# 		else if (per<=20) {
+# 			System.out.println("2등급입니다.");
+# 		}
+# 		else if ( per<=40) {
+# 			System.out.println("4등급입니다.");
+# 		}
+# 		else if (per<=30) {
+# 			System.out.println("3등급입니다.");
+# 		}
+# 		else {
+# 			System.out.println("5등급입니다.");
+# 		}
+# 	}
+
 # }
