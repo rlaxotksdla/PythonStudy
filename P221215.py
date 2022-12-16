@@ -79,3 +79,4 @@ elif per <= 30:
 
 else:
     print("5등급입니다.")
+
