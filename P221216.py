@@ -1,4 +1,6 @@
 import random
+
+
 #파이썬에는 switch 메소드가 없으므로 구현을 새로함
 def switchExample():
     dicenum=random.randrange(1,6)
@@ -43,3 +45,28 @@ def whileExample():
         print(f'속도를 감소시킵니다. \n현재속도 : {speed}')
     print("프로그램을 종료합니다.")
 whileExample()
+
+def scannerDIY():
+ count=0
+ while True:
+    try:
+      maxNumber=int(input("최대 숫자를 입력하세요.\n>>"))
+      if maxNumber>1:
+        chosenNumber=int(input(f'뽑고싶은 숫자를 입력하세요.\n  범위 : 1~{maxNumber} \n>>'))
+        if 1 <=chosenNumber<=maxNumber:
+            number=0
+            while number!=chosenNumber:
+               number= random.randrange(1,maxNumber)
+               count=count+1
+               print(f'{count}번째 시도 : {number}를 뽑았다!')
+            break
+        else :
+            print('\033[91m범위 내의 숫자를 입력하세요.\033[0m')
+
+      else:
+        print("1보다 큰 수를 입력하세요")
+    except:
+     print('\033[91m숫자를 입력하세요.\033[0m')
+     continue
+ print(f'\033[92m정수 1부터 {maxNumber}까지 랜덤으로 추출했을때 {count}번째에서 {chosenNumber}이 나왔어!\033[0m')
+scannerDIY()
