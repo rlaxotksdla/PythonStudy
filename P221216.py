@@ -25,7 +25,7 @@ def guguExample():
         print(f'{i} 단 입니다.')
         for j in b:
             print(f'{i} X {j} = {i*j}')
-        print()
+        print()  
          
 guguExample()
 
@@ -43,3 +43,4 @@ def whileExample():
         print(f'속도를 감소시킵니다. \n현재속도 : {speed}')
     print("프로그램을 종료합니다.")
 whileExample()
+
