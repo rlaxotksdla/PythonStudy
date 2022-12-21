@@ -45,25 +45,29 @@ main()
 # static과 class 차이 
 class Animal:
     language='울음소리'
-    def __int__(self):
+    def __init__(self):
         self.sound='동물 울음소리 : '+self.language
+
     @classmethod
     def cls_language(cls): # class 메소드
         return cls()
+
     @staticmethod
     def sm_language(): # static 메소드
         return Animal()
+        
     def show(self):
-        print(self.sound)
-class dog(Animal):
+        return self.sound
+        
+class Dog(Animal):
     language='멍멍'
 
 a= Animal.cls_language() # class 메소드 호출해서 class 자체를 리턴받기 가능
 b= Animal.sm_language() # static 메소드 호출해서 Animal() 클래스 리턴
 print(a.show()) # 동물 울음소리 : 울음소리 / 부모클래스의 속성 값
 print(b.show()) # 동물 울음소리 : 울음소리 / 부모클래스의 속성 값
-c= dog.cls_language() 
-d= dog.sm_language()
+c= Dog.cls_language() 
+d= Dog.sm_language()
 print(c.show()) #동물 울음소리 : 멍멍 / dog cls가 매개변수역할을 해서 들어가서 생성자에 들어감 __int__(dog)
 print(d.show()) #동물 울음소리 : 울음소리 / 무슨 클래스에서 .호출을 하든 Animal()클래스가 반환되므로__int__(Animal)
 
